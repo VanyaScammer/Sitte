@@ -158,7 +158,7 @@ def newpost(request):
             blog_f.author = request.user
             blog_f.save()
 
-            return redirect('Blog')
+            return redirect('blog')
     else:
         blogform = BlogForm()
 
