@@ -159,17 +159,17 @@ def newpost(request):
             blog_f.save()
 
             return redirect('Blog')
-        else:
-            blogform = BlogForm()
+    else:
+        blogform = BlogForm()
 
-        return render(
-            request,
-            'app/newpost.html',
-            {
-                'blogform':blogform,
-                'title':'Добавить статью блога',
-                'year':datetime.now().year,
-            }
+    return render(
+        request,
+        'app/newpost.html',
+        {
+            'blogform':blogform,
+            'title':'Добавить статью блога',
+            'year':datetime.now().year,
+        }
         )
 def videopost(request):
     assert isinstance(request, HttpRequest)
